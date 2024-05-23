@@ -1,12 +1,14 @@
-import Page1 from './components/Page1.jsx';
 import './App.css';
+import Page1 from './components/Page1.jsx';
 import Page2 from './components/Page2.jsx';
+import Page3 from './components/Page3.jsx';
 
 function App() {
   return (
     <div className="App">
       <Page1 />
       <Page2 />
+      <Page3 />
       <Page1 />
       <Page1 />
     </div>

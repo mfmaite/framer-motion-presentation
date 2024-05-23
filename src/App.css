@@ -3,3 +3,14 @@
   max-height: 100vh;
   height: 100vh;
 }
+
+@font-face {
+  font-family: 'Shifty Notes';
+  src: url('/public/ShiftyNotesRegular-BWZ6d.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.handwritten {
+  font-family: 'Shifty Notes', sans-serif;
+}

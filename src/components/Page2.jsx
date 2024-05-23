@@ -19,7 +19,7 @@ const Page2 = () => {
   const isInView = useInView(ref);
 
   return (
-    <div className='pageContainer pl-16 py-16'>
+    <div className='pageContainer p-16'>
       <h1 className='font-extrabold text-6xl pb-12'>
         Agenda
       </h1>
@@ -28,7 +28,7 @@ const Page2 = () => {
           ref={ref}
           variants={spanVariants}
           animate={isInView ? "opened" : "closed"}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 1, delay: 0.3 }}
           className='flex items-center mb-10'
         >
           <ArrowRightSVG className="w-10 h-auto" />
@@ -41,7 +41,7 @@ const Page2 = () => {
           className='flex items-center mb-10'
           variants={spanVariants}
           animate={isInView ? "opened" : "closed"}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 1, delay: 0.3 }}
         >
           <ArrowRightSVG className="w-10 h-auto" />
           <span
@@ -54,7 +54,7 @@ const Page2 = () => {
         <motion.div
           variants={spanVariants}
           animate={isInView ? "opened" : "closed"}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 1, delay: 0.3 }}
           className='flex items-center mb-10'
         >
           <ArrowRightSVG className="w-10 h-auto" />
