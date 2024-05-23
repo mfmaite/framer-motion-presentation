@@ -10,6 +10,8 @@ import Slide3 from './Slide3';
 import Slide4 from './Slide4';
 import Slide5 from './Slide5';
 
+import './carousel.css';
+
 const Carousel = () => {
   const [slide, setSlide] = useState(1);
   const [direction, setDirection] = useState(0);

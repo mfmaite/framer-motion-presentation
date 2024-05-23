@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import foto1 from '../../assets/example1.png';
 import foto2 from '../../assets/example2.png';
@@ -8,7 +8,7 @@ import foto2 from '../../assets/example2.png';
 const Slide5 = () => {
   const [selectedId, setSelectedId] = useState(null);
 
-  const images = ['../../assets/example1.png', '../../assets/example2.png'];
+  useEffect(() => console.log(selectedId), [selectedId])
 
   return (
     <div className='w-full h-full flex flex-col items-center justify-center text-black p-32'>
@@ -16,23 +16,46 @@ const Slide5 = () => {
         Source: <a href='https://www.linkedin.com/pulse/why-im-love-framer-motion-kedgard-cordero/'>https://www.linkedin.com/pulse/why-im-love-framer-motion-kedgard-cordero/</a>
       </div>
 
-      <motion.div
-        layoutId={1}
-        whileHover={{ scale: 1.2 }}
-        transition={{ duration: 0.3 }}
-        className="w-7/12 absolute top-left-1/4"
-      >
-        <img src={foto1} alt='' />
-      </motion.div>
+      <div className='flex flex-row h-full'>
+        <div>
+          <motion.div
+            layoutId={1}
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+            className="p-4"
+            onClick={() => setSelectedId(1)}
+          >
+            <img src={foto1} alt='' className='rounded-lg' />
+          </motion.div>
+        </div>
 
-      <motion.div
-        layoutId={2}
-        whileHover={{ scale: 1.2 }}
-        transition={{ duration: 0.3 }}
-        className="w-7/12"
-      >
-        <img src={foto2} alt='' />
-      </motion.div>
+        <div className='flex items-end'>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+            className="p-4"
+            onClick={() => setSelectedId(2)}
+          >
+            <img src={foto2} alt='' className='rounded-lg' />
+          </motion.div>
+        </div>
+      </div>
+
+      <AnimatePresence>
+        {selectedId && (
+          <>
+            <div onClick={() => setSelectedId(null)} className='bg-black opacity-30 w-full h-full fixed top-0 left-00 z-10'/>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className='z-20 absolute'
+            >
+              <img src={selectedId === 1 ? foto1 : foto2} alt='' className='rounded-lg' />
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
