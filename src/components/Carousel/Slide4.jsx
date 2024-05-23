@@ -2,13 +2,12 @@ import React from 'react'
 
 const Slide4 = () => {
   return (
-    <div className='w-full h-full flex flex-col items-center justify-center text-black p-32'>
-      <h1 className='font-extrabold text-6xl pb-12 text-black text-start w-full'>
+    <div className='w-full h-full flex flex-col justify-center text-start text-black p-32'>
+      <h1 className='font-extrabold text-6xl pb-12 text-black w-full'>
         Simple y Poderoso
       </h1>
       <span className='text-5xl'>
-        A pesar de que es muy fácil de utilizar, esto no repercute en
-        la capacidad de lo que se puede llegar a lograr.
+        Su facilidad de uso no repercute en el potencial de los resultados.
       </span>
     </div>
   )

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -7,8 +7,6 @@ import foto2 from '../../assets/example2.png';
 
 const Slide5 = () => {
   const [selectedId, setSelectedId] = useState(null);
-
-  useEffect(() => console.log(selectedId), [selectedId])
 
   return (
     <div className='w-full h-full flex flex-col items-center justify-center text-black p-32'>
