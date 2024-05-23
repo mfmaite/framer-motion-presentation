@@ -2,10 +2,12 @@ import React from 'react'
 
 const Slide2 = () => {
   return (
-    <div className='w-full h-full flex items-center justify-center text-black p-32'>
+    <div className='w-full h-full flex flex-col items-center justify-center text-black p-32'>
+      <h1 className='font-extrabold text-6xl pb-12 text-black text-start w-full'>
+        Flexibilidad
+      </h1>
       <span className='text-5xl'>
-        Framer Motion es una biblioteca de animación para React
-        que permite crear animaciones y transiciones de manera sencilla y rápida.
+        Permite crear animaciones complejas y altamente interactivas.
       </span>
     </div>
   )

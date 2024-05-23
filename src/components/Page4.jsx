@@ -1,7 +1,7 @@
 import React from 'react'
 import Carousel from './Carousel/Carousel'
 
-const Page3 = () => {
+const Page4 = () => {
   return (
     <div className='pageContainer p-12'>
       <div className='w-full h-full'>
@@ -11,4 +11,4 @@ const Page3 = () => {
   )
 }
 
-export default Page3
+export default Page4;

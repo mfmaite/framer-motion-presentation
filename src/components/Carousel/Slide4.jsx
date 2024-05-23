@@ -1,17 +1,17 @@
 import React from 'react'
 
-const Slide3 = () => {
+const Slide4 = () => {
   return (
     <div className='w-full h-full flex flex-col items-center justify-center text-black p-32'>
       <h1 className='font-extrabold text-6xl pb-12 text-black text-start w-full'>
-        Integración con Lógica de Aplicación
+        Simple y Poderoso
       </h1>
       <span className='text-5xl'>
-        Permite crear animaciones que responden directamente a los cambios
-        de estado y la lógica de la aplicación.
+        A pesar de que es muy fácil de utilizar, esto no repercute en
+        la capacidad de lo que se puede llegar a lograr.
       </span>
     </div>
   )
 }
 
-export default Slide3
+export default Slide4;
