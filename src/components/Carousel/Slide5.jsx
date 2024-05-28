@@ -42,7 +42,7 @@ const Slide5 = () => {
       <AnimatePresence>
         {selectedId && (
           <>
-            <div onClick={() => setSelectedId(null)} className='bg-black opacity-30 w-full h-full fixed top-0 left-00 z-10'/>
+            <div onClick={() => setSelectedId(null)} className='bg-black opacity-50 w-full h-full fixed top-0 left-00 z-10'/>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
